@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+:root { color-scheme: light dark; }
+html, body, #root { height: 100%; }
+
+/* Базовые цвета темы */
+body { @apply bg-white text-black dark:bg-neutral-950 dark:text-neutral-100; }
+
+/* Утилитарные классы-помощники */
+.container { @apply mx-auto max-w-3xl p-4; }
+.card { @apply rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4; }
+.btn { @apply rounded-xl border px-4 py-2 hover:bg-neutral-50 dark:hover:bg-neutral-900 disabled:opacity-50 disabled:pointer-events-none; }
+
+/* Поля ввода */
+.input, .textarea { @apply w-full rounded-xl border border-neutral-300 dark:border-neutral-700 bg-transparent p-2 outline-none; }
+.input:focus, .textarea:focus { @apply ring-2 ring-neutral-300 dark:ring-neutral-700; }
+/* Для textarea отдельно можно добавить минимальную высоту */
+.textarea { @apply min-h-32; }
+
+.err { @apply text-red-600 text-sm mt-1; }
+.muted { @apply text-sm opacity-70; }
